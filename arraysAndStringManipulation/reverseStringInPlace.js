@@ -8,3 +8,10 @@
 // The goal of this question is to practice manipulating strings in place. Since we're modifying the input, we need a mutable ↴ type like an array, instead of JavaScript's immutable strings.
 
 
+const reverseString = (arr) => {
+
+};
+
+const input = ['a', 'b', 'c', 'd'];
+
+console.log(reverseString(input));
