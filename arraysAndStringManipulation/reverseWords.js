@@ -27,7 +27,7 @@
 
 
 const reverseWords = (arr) => {
-
+	return arr
 };
 
 const message = [ 'c', 'a', 'k', 'e', ' ',

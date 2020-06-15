@@ -9,7 +9,7 @@
 
 
 const reverseString = (arr) => {
-	return input.reverse();
+	return arr.reverse();
 };
 
 const input = ['a', 'b', 'c', 'd'];
