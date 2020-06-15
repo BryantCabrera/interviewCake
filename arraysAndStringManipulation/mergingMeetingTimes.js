@@ -51,7 +51,7 @@ const mergeRanges = (arr) => {
 			solution.push(arr[i]);
 		} else if (arr[i].startTime <= solution[solution.length - 1].endTime) {
 			// If the current meeting range is within the current meeting range, merge the two ranges
-			solution[solution.length - 1].endTime = arr[i].endTime;
+			solution[solution.length - 1].endTime = arr[i].endTime  > solution[solution.length - 1].endTime ? arr[i].endTime : solution[solution.length - 1].endTime;
 		}
 	}
 
@@ -67,3 +67,12 @@ const sampleData = [
 ];
 
 console.log(mergeRanges(sampleData));
+
+const sampleData2 = [
+  { startTime: 1, endTime: 10 },
+  { startTime: 2, endTime: 6 },
+  { startTime: 3, endTime: 5 },
+  { startTime: 7, endTime: 9 },
+];
+
+console.log(mergeRanges(sampleData2));
