@@ -42,22 +42,16 @@ const mergeRanges = (arr) => {
 	arr.sort(function(a, b) {
 		return a.startTime - b.startTime;
 	});
-	console.log(arr, 'sorted arr');
 
 	const solution = [];
 
 	for (let i = 0; i < arr.length; i++) {
-		console.log(`${i}th iteration starting.`, arr[i].startTime, i === 0 ? solution : solution[solution.length - 1].endTime);
 		// If the current meeting time is the first one or if it starts later than the previous meeting's endTime, keep iterating
 		if (i === 0 || (i !== 0 && arr[i].startTime > solution[solution.length - 1].endTime)) {
-			console.log(i, solution, 'Starts after previous meeting endTime');
 			solution.push(arr[i]);
-			console.log(i, solution, 'Solution after change in > conditional');
 		} else if (arr[i].startTime <= solution[solution.length - 1].endTime) {
-			console.log(i, solution, 'Starts before previous meeting endTime');
 			// If the current meeting range is within the current meeting range, merge the two ranges
 			solution[solution.length - 1].endTime = arr[i].endTime;
-			console.log(i, solution, 'Solution after change in < conditional');
 		}
 	}
 
