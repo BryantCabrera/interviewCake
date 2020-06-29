@@ -64,46 +64,6 @@ const reverseWords = (arr) => {
 	return arr.join('');
 };
 
-// const reverseWords = (arr) => {
-// 	let previousSpaceIndex = 0;
-// 	let nextSpaceIndex = arr.indexOf(' ');
-// 	let leftIndex = 0;
-// 	let rightIndex = arr.length - 1;
-
-// 	const reverse = (leftIdx, rightIdx) => {
-		
-// 	};
-
-// 	while (previousSpaceIndex !== -1) {
-// 		while (leftIndex < rightIndex) {
-// 			let tempChar = arr[leftIndex];
-// 			arr[leftIndex] = arr[rightIndex];
-// 			arr[rightIndex] = tempChar;
-
-// 			leftIndex++;
-// 			rightIndex--;
-// 		}
-
-// 		if (previousSpaceIndex === 0) {
-// 			nextSpaceIndex = arr.indexOf(' ');
-// 		}
-
-// 		console.log(`arr: ${arr.join('')}`);
-// 		console.log(`previousSpaceIndex: ${previousSpaceIndex}, nextSpaceIndex: ${nextSpaceIndex}, leftIndex: ${leftIndex}, rightIndex: ${rightIndex}`);
-// 		// let tempSpaceIndex = previousSpaceIndex;
-// 		// console.log(`tempSpaceIndex BEFORE: ${tempSpaceIndex}`);
-// 		previousSpaceIndex = nextSpaceIndex;
-// 		// console.log(`tempSpaceIndex AFTER: ${tempSpaceIndex}`);
-// 		nextSpaceIndex = arr.indexOf(' ', previousSpaceIndex !== - 1 ? previousSpaceIndex + 1 : previousSpaceIndex);
-// 		// console.log(previousSpaceIndex, nextSpaceIndex, previousSpaceIndex !== - 1 ? previousSpaceIndex + 1 : previousSpaceIndex, '@@@@@');
-// 		leftIndex = previousSpaceIndex + 1;
-// 		rightIndex = nextSpaceIndex === -1 ? nextSpaceIndex : nextSpaceIndex - 1;
-// 		console.log(`previousSpaceIndex: ${previousSpaceIndex}, nextSpaceIndex: ${nextSpaceIndex}, leftIndex: ${leftIndex}, rightIndex: ${rightIndex}`);
-// 	}
-	
-// 	return arr.join('');
-// };
-
 const message = [ 'c', 'a', 'k', 'e', ' ',
                 'p', 'o', 'u', 'n', 'd', ' ',
 								's', 't', 'e', 'a', 'l' ];
