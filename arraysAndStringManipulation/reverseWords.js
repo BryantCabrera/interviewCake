@@ -51,9 +51,13 @@ const reverseWords = (arr) => {
 	while (previousSpaceIndex !== -1) {
 		reverse(left, right);
 
+		// Set the previousSpaceIndex to the nextSpaceIndex.
 		previousSpaceIndex = nextSpaceIndex;
+		// Determine the index of the next space.
 		nextSpaceIndex = arr.indexOf(' ', previousSpaceIndex !== - 1 ? previousSpaceIndex + 1 : previousSpaceIndex);
+		// Set which index for the start of the word that we want to unscramble.
 		left = previousSpaceIndex + 1;
+		// Set which index for the end of the word that we want to unscramble.
 		right = nextSpaceIndex === -1 ? arr.length - 1 : nextSpaceIndex - 1;
 	}
 	
