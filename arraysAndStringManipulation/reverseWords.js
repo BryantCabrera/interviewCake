@@ -49,22 +49,17 @@ const reverseWords = (arr) => {
 
 	// Reverse each word.
 	while (previousSpaceIndex !== -1) {
-		console.log(`BEFORE arr: ${arr.join('')}`);
 		reverse(left, right);
-		console.log(`AFTER arr: ${arr.join('')}`);
-		console.log(`BEFORE \n previousSpaceIndex: ${previousSpaceIndex}, nextSpaceIndex: ${nextSpaceIndex}, left: ${left}, right: ${right}`);
 
 		previousSpaceIndex = nextSpaceIndex;
-		// console.log(`tempSpaceIndex AFTER: ${tempSpaceIndex}`);
 		nextSpaceIndex = arr.indexOf(' ', previousSpaceIndex !== - 1 ? previousSpaceIndex + 1 : previousSpaceIndex);
-		// console.log(previousSpaceIndex, nextSpaceIndex, previousSpaceIndex !== - 1 ? previousSpaceIndex + 1 : previousSpaceIndex, '@@@@@');
 		left = previousSpaceIndex + 1;
 		right = nextSpaceIndex === -1 ? arr.length - 1 : nextSpaceIndex - 1;
-		console.log(`AFTER \n previousSpaceIndex: ${previousSpaceIndex}, nextSpaceIndex: ${nextSpaceIndex}, left: ${left}, right: ${right}`);
 	}
 	
 	return arr.join('');
 };
+
 // const reverseWords = (arr) => {
 // 	let previousSpaceIndex = 0;
 // 	let nextSpaceIndex = arr.indexOf(' ');
